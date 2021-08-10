@@ -158,6 +158,7 @@ allInputs.forEach((input) => {
             case "=":
                 {
                     allNums.push(num.join(''));
+                    console.log(allNums, 'start');
                     let length = allNums.length;
                     for (; length > 0; length--) {
                         let operation = operations[0];
@@ -165,7 +166,6 @@ allInputs.forEach((input) => {
                             case "+":
                                 {
                                     answer = (+allNums[0]) + (+allNums[1]);
-                                    debugger;
                                     allNums.shift();
                                     allNums.shift();
                                     allNums.unshift(answer);
@@ -175,7 +175,6 @@ allInputs.forEach((input) => {
                             case "-":
                                 {
                                     answer = (+allNums[0]) - (+allNums[1]);
-                                    debugger;
                                     allNums.shift();
                                     allNums.shift();
                                     allNums.unshift(answer);
@@ -185,7 +184,6 @@ allInputs.forEach((input) => {
                             case "/":
                                 {
                                     answer = (+allNums[0]) / (+allNums[1]);
-                                    debugger;
                                     allNums.shift();
                                     allNums.shift();
                                     allNums.unshift(answer);
@@ -195,7 +193,6 @@ allInputs.forEach((input) => {
                             case "*":
                                 {
                                     answer = (+allNums[0]) * (+allNums[1]);
-                                    debugger;
                                     allNums.shift();
                                     allNums.shift();
                                     allNums.unshift(answer);
@@ -206,8 +203,9 @@ allInputs.forEach((input) => {
                     }
                     output.textContent = answer;
                     operations = [];
-                    num = [];
+                    num = (answer + '').split('');
                     allNums = [];
+                    console.log(allNums, 'end')
                     break;
                 }
 

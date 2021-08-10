@@ -1,83 +1,87 @@
 *,
 *::after,
 *::before {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-	background-color: #000;
+    background-color: #000;
+}
+
+.centerWrapper {
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .calculatorWrapper {
-	min-width: 300px;
-	max-width: 300px;
-	height: 80vh;
-	margin: 50px auto;
-	border: 1px solid #fff;
-	display: grid;
-	grid-template-rows: 1fr 1fr;
-	padding: 5px;
-	border-radius: 10px;
+    min-width: 320px;
+    max-width: 20vw;
+    height: 60vh;
+    border: 1px solid #fff;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .displayOutputWrapper {
-	border-bottom: 1px solid yellow;
-	margin-bottom: 5px;
-	padding: 10px;
-	display: flex;
-	justify-content: flex-end;
-	align-items: flex-end;
-	flex-wrap: wrap;
+    border-bottom: 1px solid yellow;
+    margin-bottom: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
 }
 
 .displayOutput {
-	font-size: 26px;
-	color: #fff;
+    font-size: 26px;
+    color: #fff;
 }
 
 .inputButtons {
-	//border: 1px solid red;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .inputButtons .orangeButton {
-	color: orange;
+    color: orange;
 }
 
 .inputButton {
-	//border: 1px solid pink;
-	color: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 5px;
-	font-size: 25px;
-	cursor: pointer;
-	transition: all .1s ease-in;
-	user-select: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all .1s ease-in;
+    user-select: none;
 }
 
 .inputButton:hover {
-	background-color: grey;
-	border-radius: 50px;
+    background-color: grey;
+    border-radius: 50px;
 }
 
 .inputButton:active {
-	opacity: .5;
+    opacity: .5;
 }
 
 .enterButton {
-	background-color: orange;
-	border-radius: 50px;
+    background-color: orange;
+    border-radius: 50px;
 }
 
 .inputButton.enterButton:hover {
-	background-color: orange;
-	opacity: .9;
+    background-color: orange;
+    opacity: .9;
 }
 
 .inputButton.enterButton:active {
-	background-color: orange;
-	opacity: .5;
+    background-color: orange;
+    opacity: .5;
 }
